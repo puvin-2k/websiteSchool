@@ -1,0 +1,165 @@
+* {
+  margin: 0 0 0;
+}
+body {
+  min-height: 100vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(0deg, #383838, #ffffff);
+  background-repeat: no-repeat;
+}
+
+.btnHideShow {
+  padding: 10px 30px 10px;
+  background: linear-gradient(45deg, #ffa500, #ff7f50);
+  border-radius: 50px;
+  border: none;
+  color: white;
+  margin: 10px;
+  font-size: 20px;
+}
+.textHeading {
+  background: linear-gradient(45deg, #ffa500, #ff7f50);
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+.cartContainer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; /* Centers user cards horizontally */
+  flex-wrap: wrap; /* Allows cards to wrap into the next line if needed */
+  gap: 20px; /* Adds space between user cards */
+}
+.user {
+  background-color: white;
+  text-align: center;
+  display: inline-block;
+  width: 250px;
+  height: 330px;
+  border: 2px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Ensures no overflow of the image */
+}
+
+.user:hover {
+  transform: scale(1.05); /* Slightly scale up the card on hover */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visual appeal */
+}
+
+.userImageSize {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px; /* Set fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the space */
+  object-position: 50% 20%; /* Move the image down by adjusting the vertical position */
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: 200;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(45deg, #ffa500, #ff7f50);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.bgImage {
+  margin-top: 10px;
+  width: 100%; /* Full viewport height */
+  background-image: url("image/DSC09544.jpg"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(0.5px); /* Apply blur to background image */
+  border: 10px solid #ffa500; /* Orange border */
+  box-sizing: border-box;
+}
+.hero-section {
+  background-image: url("image/DSC09544.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 30vh; /* Full height of the viewport */
+  width: 100%;
+  text-align: center;
+  border-radius: 20px; /* Rounded corners for the background image */
+  overflow: hidden;
+}
+
+.show-btn {
+  padding: 10px 30px 10px;
+  background: linear-gradient(45deg, #ffa500, #ff7f50);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  border: none;
+  color: white;
+  margin: 10px;
+  font-size: 20px;
+  transition: all 0.2s;
+}
+.show-btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 15px 40px rgb(74, 74, 74);
+}
+.bg-overlay {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+.modal {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background-color: rgb(106, 106, 106, 0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  align-content: center;
+  border: 2px solid orange;
+  transform: scale(1, 1);
+  opacity: 1;
+  z-index: 1000;
+  transition: all 0.2s ease;
+}
+.modal.active {
+  transform: scale(1, 1);
+  opacity: 1;
+  filter: blur(0);
+}
+.modal > h3 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+.close-btn {
+  color: white;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 40px;
+  cursor: pointer;
+  transform: all 0.2s;
+}
+.close-btn:hover {
+  transform: rotate(90deg);
+}
